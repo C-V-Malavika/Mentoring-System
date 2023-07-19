@@ -1,0 +1,35 @@
+LINK-->http://127.0.0.1:8000/
+
+LAUNCH INFORMATION
+
+Malavikas-MacBook-Pro:SDPMS malavika$ pip install django
+Requirement already satisfied: django in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (4.2.2)
+Requirement already satisfied: asgiref<4,>=3.6.0 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from django) (3.7.2)
+Requirement already satisfied: sqlparse>=0.3.1 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from django) (0.4.4)
+Requirement already satisfied: typing-extensions>=4 in /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages (from asgiref<4,>=3.6.0->django) (4.6.3)
+Malavikas-MacBook-Pro:SDPMS malavika$ django-admin startproject SDPMS_Project .
+Malavikas-MacBook-Pro:SDPMS malavika$ django-admin startapp SDPMS_App
+Malavikas-MacBook-Pro:SDPMS malavika$ pipenv shell
+Launching subshell in virtual environment...
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+bash-3.2$  . /Users/malavika/.local/share/virtualenvs/SDPMS-MpjcIvTu/bin/activate
+(SDPMS) bash-3.2$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+June 20, 2023 - 15:11:16
+Django version 4.2.2, using settings 'SDPMS_Project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+[20/Jun/2023 15:12:13] "GET / HTTP/1.1" 200 10664
+Not Found: /favicon.ico
+[20/Jun/2023 15:12:13] "GET /favicon.ico HTTP/1.1" 404 2117
+[20/Jun/2023 15:13:05] "GET / HTTP/1.1" 200 10664

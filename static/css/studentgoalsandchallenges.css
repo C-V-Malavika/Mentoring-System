@@ -1,0 +1,19 @@
+div {
+ height: 80px;
+ background-color: rgb(110, 195, 251);
+ padding: 10px 5px;
+ transform: translate(0%,30%);
+ display: block;
+}
+   
+table,th,td{
+ border:2px solid black;
+}
+   
+h1{
+ color: royalblue;
+}
+
+h2{
+ font-size: 30px;
+}

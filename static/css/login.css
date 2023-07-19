@@ -1,0 +1,53 @@
+body{
+ background-image: url('../img/SSNCE.jpg');
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+ background-size: cover;
+}
+   
+div{
+ width: 400px;
+ height: 320px;
+ background-color: blue;
+ align-self: center;
+ align-content: center;
+ padding: 40px;
+ border-radius: 25px;
+ transform: translate(0%,70%);
+ display: block;
+ margin: auto;
+}
+
+.button {
+ border-radius: 30px;
+ color: blue;
+ text-align: center;
+ background-color: rgb(228, 233, 238);
+ height: 45px;
+ width: 70px;
+ padding: 10px;
+ margin: auto;
+ display: block;
+ cursor: pointer;
+ position: middle;
+ float:none;       
+}
+
+.logo{
+ height: 75px;
+ width: 75px;
+ border-radius: 40px;
+}
+   
+form{
+ color: white;
+}
+
+a{
+ color: white;
+}
+
+font{
+ font-size: 25px;
+}
+   
