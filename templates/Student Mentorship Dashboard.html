@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mentorship Dashboard</title>
+      {% load static %}
+      <link rel="stylesheet" href="{% static 'css/studentmentorshipdashboard.css' %}"></link>
+    <h1 class="h1">Mentorship</h1>
+</head>
+<body>
+ <div class=".button">
+  <div class="center">
+   <form method="POST" action="{% url 'selfassessment' %}">
+    {% csrf_token %}
+    <button class="button">SELF ASSESSMENT</button>
+   </form>
+   <br><br>
+   <form method="POST" action="{% url 'goalsandchallenges' %}">
+    {% csrf_token %}
+    <button class="button">GOALS AND CHALLENGES</button>
+   </form>
+   <br><br>
+   <form method="POST" action="{% url 'studentachievement' %}">
+    {% csrf_token %}
+    <button class="button">STUDENT ACHIEVEMENTS</button>
+   </form>
+   <br><br>
+   <form method="POST" action="{% url 'previousmeeting' %}">
+    {% csrf_token %}
+    <button class="button">PREVIOUS MEETING DETAILS</button>
+   </form>
+   <br><br>
+   <form method="POST" action="{% url 'meetingrequest' %}">
+    {% csrf_token %}
+    <button class="button">MEETING</button>
+   </form>
+   <br><br>
+   <form method="POST" action="{% url 'mentortimetable' %}">
+    {% csrf_token %}
+    <button class="button">MENTOR TIMETABLE</button>
+   </form>
+  </div>
+ </div>
+
+</body>
+</html>

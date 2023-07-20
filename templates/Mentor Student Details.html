@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>  
+  <title>Student Names visible for Mentor</title>
+   {% load static %}
+   <link rel="stylesheet" href="{% static 'css/mentorstudentdetails.css' %}"></link>
+  <h1 class="h1" style="text-align:center;">List of Mentees</h1>
+</head>  
+
+<body>
+ <div class=".button">
+  <div class="center">
+   <br><br><br>
+   <form method="POST" action="{% url 'mentorstudentdetails' %}">
+    {% csrf_token %}
+        {% for item in data_final %}
+        <button class="button" name="button" value={{ item.email1 }}>{{ item.name1 }}</button>
+        {% endfor %}
+    </form>
+   <br>
+   <form method="POST" action="{% url 'mentorstudentdetails' %}">
+    {% csrf_token %}
+        {% for item in data_final %}
+        <button class="button" name="button" value={{ item.email2 }}>{{ item.name2 }}</button>
+        {% endfor %}
+    </form>
+   <br>
+   <form method="POST" action="{% url 'mentorstudentdetails' %}">
+    {% csrf_token %}
+        {% for item in data_final %}
+        <button class="button" name="button" value={{ item.email3 }}>{{ item.name3 }}</button>
+        {% endfor %}
+    </form>
+   <br>
+   <form method="POST" action="{% url 'mentorstudentdetails' %}">
+    {% csrf_token %}
+        {% for item in data_final %}
+        <button class="button" name="button" value={{ item.email4 }}>{{ item.name4 }}</button>
+        {% endfor %}
+    </form>        
+   <br>
+   <form method="POST" action="{% url 'mentorstudentdetails' %}">
+    {% csrf_token %}
+        {% for item in data_final %}
+        <button class="button" name="button" value={{ item.email5 }}>{{ item.name5 }}</button>
+        {% endfor %}
+    </form>        
+   <br>
+   <form method="POST" action="{% url 'mentorstudentdetails' %}">
+    {% csrf_token %}
+        {% for item in data_final %}
+        <button class="button" name="button" value={{ item.email6 }}>{{ item.name6 }}</button>
+        {% endfor %}
+    </form>
+   <br>
+   <form method="POST" action="{% url 'mentorstudentdetails' %}">
+    {% csrf_token %}
+        {% for item in data_final %}
+        <button class="button" name="button" value={{ item.email7 }}>{{ item.name7 }}</button>
+        {% endfor %}
+    </form>
+   <br>
+   <form method="POST" action="{% url 'mentorstudentdetails' %}">
+    {% csrf_token %}
+        {% for item in data_final %}
+        <button class="button" name="button" value={{ item.email8 }}>{{ item.name8 }}</button>
+        {% endfor %}
+    </form>
+   <br>
+   <form method="POST" action="{% url 'mentorstudentdetails' %}">
+    {% csrf_token %}
+        {% for item in data_final %}
+        <button class="button" name="button" value={{ item.email9 }}>{{ item.name9 }}</button>
+        {% endfor %}
+    </form>
+   <br>
+   <form method="POST" action="{% url 'mentorstudentdetails' %}">
+    {% csrf_token %}
+        {% for item in data_final %}
+        <button class="button" name="button" value={{ item.email10 }}>{{ item.name10 }}</button>
+        {% endfor %}
+    </form>
+  </div>
+ </div>
+
+</body>
+</html>

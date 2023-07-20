@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Login </title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/newmeeting.css' %}"></link>
+</head>
+<body>
+
+  <p><h1 style="text-align: center; color: royalblue;">New Meeting</h1></p>
+
+<div>
+  <form method="POST" action="{% url 'newmeetingdetails' %}">
+    {% csrf_token %}
+    <p><label for="semester" style="font-size: 20px">SEMESTER</label></p>
+    <select style="font-size: 20px" id="semester" name="semester">
+        <option value="0"></option>
+        <option value="1">SEMESTER 1</option>
+        <option value="2">SEMESTER 2</option>
+        <option value="3">SEMESTER 3</option>
+        <option value="4">SEMESTER 4</option>
+        <option value="5">SEMESTER 5</option>
+        <option value="6">SEMESTER 6</option>
+        <option value="7">SEMESTER 7</option>
+        <option value="8">SEMESTER 8</option>
+      </select>
+
+    <p><label for="date" style="font-size: 20px">DATE</label><br></p>
+    <input  style="font-size: 20px" type="date" id="date" name="date" placeholder="On which day..?"><br>
+
+    <p><label for="time" style="font-size: 20px">TIME</label><br></p>
+    <input style="font-size: 20px" type="text" id="time" name="time" placeholder="At what time..?"><br>
+
+    <p><label for="description" style="font-size: 20px">DESCRIPTION</label><br></p>
+    <input style="font-size: 20px" type="text" id="description" name="description" placeholder="Description..?"><br>
+
+    <p><label for="remark" style="font-size: 20px">REMARK</label><br></p>
+    <input style="font-size: 20px" type="text" id="remark" name="remark" placeholder="Any Remarks.."><br>
+
+    <p><label for="confidentialremark" style="font-size: 20px">CONFIDENTIAL REMARKS</label><br></p>
+    <input style="font-size: 20px" type="text" id="confidentialremark" name="confidentialremark" placeholder="Any confidential remarks..?"><br>
+    
+    <p><label for="enteredby" style="font-size: 20px">ENTERED BY</label><br></p>
+    <tr>
+    {% for item in data %}
+    <td><textarea style="font-size: 20px" id="enteredby" name="enteredby" cols="133" rows="2" value={{ item.name }} readonly=True>{{ item.name }}</textarea></td><br>
+    {% endfor %} 
+    </tr>
+    
+    <p><label for="action" style="font-size: 20px">ACTION</label><br></p>
+    <input style="font-size: 20px" type="text" id="action" name="action" placeholder="Immediate Actions if any.."><br>
+    
+  <p><input style="font-size: 20px" type="submit" value="Submit"></p>
+</form>
+
+</div>
+</body>
+</html>

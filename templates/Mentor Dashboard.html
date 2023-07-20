@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Dashboard </title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}"></link>
+  <h1 class="h1">SSN ERP System</h1>
+</head>
+
+<body>
+<div class="center">
+  <form method="POST" action="{% url 'mentorprofile' %}">
+    {% csrf_token %}
+    <button class="button" class="center">PROFILE<br><br>
+      <img src="{% static 'img/Profile.jpg' %}" height="200" width="200"/>
+    </button>
+  </form>
+  <br><br><br>
+  <form method="POST" action="{% url 'mentorstudentlist' %}">
+    {% csrf_token %}
+    <button class="button" class="center">MENTORSHIP<br><br>
+      <img src="{% static 'img/mentorship.png' %}" height="200" width="200"/>
+    </button>
+  </form>
+  </html>
+</div>
+</body>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> New Achievement </title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/newmeeting.css' %}"></link>
+</head>
+<body>
+
+  <p><h1 style="text-align: center; color: royalblue;">New Achievement</h1></p>
+
+<div class="center">
+  <form method="POST" action="{% url 'editablenewachievement' %}">
+    {% csrf_token %}
+    <label style="font-size: 25px" for="achievement">Achievement:</label><br><br>
+     <input style="font-size: 20px" size="50" type="achievement" id="achievement" name="achievement" placeholder="Achievement?"><br>
+    <p><input style="font-size: 20px" type="submit" value="Submit"></p>
+  </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Login </title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}"></link>
+</head>
+<center><body>
+<form method="POST" action="{% url 'login' %}">
+    {% csrf_token %}
+ <center><div>
+<label for="Invalid" style="font-size:20px;">Invalid user name or password!!!</label><br>
+ <img src="{% static 'img/SSN LOGO.png' %}" class="logo"><br><br>
+ <label for="Username" style="font-size:20px;">Username</label><br>
+ <input style="font-size:15px;" type="text" id="Username" name="username" placeholder="Username" size="30"><br><br>
+ <label for="Password" style="font-size:20px;">Password</label><br>
+ <input style="font-size:15px;" type="password" id="Password" name="password" placeholder="Password" size="30"><br><br>
+ <button class="button" style="font-size:15px;">LOGIN</button><br>
+ <a href="/login/forgotpassword">Forgot Password?</a>
+ </div>
+</form>
+
+</body></center>
+</head>  
+</html>

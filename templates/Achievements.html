@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Achievements</title>
+   {% load static %}
+   <link rel="stylesheet" href="{% static 'css/achievements.css' %}"></link>
+ <h1 class="h1">Achievements</h1>
+</head>
+ 
+ <br><br>
+  
+ <font face="Times New Roman" size="5"><table style="width:45%" align="center">
+ <tr>
+ <th>Achievements</th>
+ </tr>
+ {% for item in data %} 
+  {% for item1 in item.achievement %} 
+ <tr>
+  <td><textarea style="font-size: 20px" name="comments" id="comments" cols="60" rows="2" readonly=True>{{ item1 }}</textarea></td>
+ </tr>
+  {% endfor %}
+ {% endfor %}
+
+ </font> 
+ </table>   
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title> Goals and Challenges </title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/studentgoalsandchallenges.css' %}"></link>
+    </head>
+ 
+<body>
+ <div>
+  <h2 class="h2">Goals Grid</h2>
+ </div>
+
+<br><br><br><br>
+
+<font face="Times New Roman" size="5"><table style="width:100%" align="center">
+ <tr>
+ <th>Domain</th>
+ <th>Goal</th>
+ <th>Plan of action</th>
+ </tr>
+
+ <tr>
+ <td>Acquire (Don't have, but want)</td>
+ {% for item in data %}
+ <td><textarea style="font-size: 20px" name="comments" id="comments" cols="70" rows="3" readonly=True>{{ item.name2 }}</textarea></td>
+ <td><textarea style="font-size: 20px" name="comments" id="comments" cols="40" rows="3" readonly=True>{{ item.name6 }}</textarea></td>
+ {% endfor %}
+ </tr>
+
+ <tr>
+    <td>Eliminate (Have but Don't want)</td>
+    {% for item in data %}
+    <td><textarea style="font-size: 20px" name="comments" id="comments" cols="70" rows="3" readonly=True>{{ item.name3 }}</textarea></td>
+    <td><textarea style="font-size: 20px" name="comments" id="comments" cols="40" rows="3" readonly=True>{{ item.name7 }}</textarea></td>
+   {% endfor %}
+ </tr>
+
+ <tr>
+    <td>Avoid (Don't have and Don't want)</td>
+    {% for item in data %}
+    <td><textarea style="font-size: 20px" name="comments" id="comments" cols="70" rows="3" readonly=True>{{ item.name4 }}</textarea></td>
+    <td><textarea style="font-size: 20px" name="comments" id="comments" cols="40" rows="3" readonly=True>{{ item.name8 }}</textarea></td>
+    {% endfor %}
+ </tr>
+
+ <tr>
+    <td>Sustain (Have and want)</td>
+    {% for item in data %}
+    <td><textarea style="font-size: 20px" name="comments" id="comments" cols="70" rows="3" readonly=True>{{ item.name5 }}</textarea></td>
+    <td><textarea style="font-size: 20px" name="comments" id="comments" cols="40" rows="3" readonly=True>{{ item.name9 }}</textarea></td>
+    {% endfor %}
+ </tr></font>
+ </table>
+</body>
+
+<br>
+
+<body>
+ <div>
+  <h2 class="h2">Challenges and Sources of Support</h2>
+ </div>
+  
+ <br><br><br>
+  
+ <font face="Times New Roman" size="5"><table style="width:100%" align="center">
+ <tr>
+ <th>Domain</th>
+ <th>Challenges</th>
+ <th>Source of support</th> 
+ </tr>
+  
+ <tr>
+    <td>Academic</td>
+    {% for item in data %}
+    <td><textarea style="font-size: 20px" name="comments" id="comments" cols="60" rows="2" readonly=True>{{ item.name10 }}</textarea></td>
+    <td><textarea style="font-size: 20px" name="comments" id="comments" cols="60" rows="2" readonly=True>{{ item.name14 }}</textarea></td>
+    {% endfor %}
+ </tr>
+  
+ <tr>
+    <td>Relationship</td>
+    {% for item in data %}
+    <td><textarea style="font-size: 20px" name="comments" id="comments" cols="60" rows="2" readonly=True>{{ item.name11 }}</textarea></td>
+    <td><textarea style="font-size: 20px" name="comments" id="comments" cols="60" rows="2" readonly=True>{{ item.name15 }}</textarea></td>
+    {% endfor %}
+ </tr>
+  
+ <tr>
+    <td>Financial</td>
+    {% for item in data %}
+    <td><textarea style="font-size: 20px" name="comments" id="comments" cols="60" rows="2" readonly=True>{{ item.name12 }}</textarea></td>
+    <td><textarea style="font-size: 20px" name="comments" id="comments" cols="60" rows="2" readonly=True>{{ item.name16 }}</textarea></td>
+    {% endfor %}
+ </tr>
+  
+ <tr>
+    <td>Health</td>
+    {% for item in data %}
+    <td><textarea style="font-size: 20px" name="comments" id="comments" cols="60" rows="2" readonly=True>{{ item.name13 }}</textarea></td>
+    <td><textarea style="font-size: 20px" name="comments" id="comments" cols="60" rows="2" readonly=True>{{ item.name17 }}</textarea></td>
+    {% endfor %}
+ </tr></font> 
+ </table>   
+</body>
+</html>

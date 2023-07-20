@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Self Assessment </title>
+          {% load static %}
+          <link rel="stylesheet" href="{% static 'css/studentselfassessment.css' %}"></link>
+        <h1 class="h1">Self Assessment</h1>
+    </head>
+
+<form method="POST" action="{% url 'editableselfassessment' %}">
+  {% csrf_token %} 
+<body>
+ <div>
+  <h2 class="h2">1. Briefly tell me about yourself and your dreams about future?</h2>
+ </div>
+
+ <br><br>
+
+ <tr>
+ {% for item in data %}
+ <td><textarea style="font-size: 20px" name="comments1" id="comments1" cols="135" rows="3" readonly=True>{{ item.name2 }}</textarea></td>
+ {% endfor %}
+ </tr>
+
+ <br>
+
+ <div>
+  <h2 class="h2">2. How is your relationship with your parents/siblings/relatives?</h2>
+ </div>
+  
+ <br><br>
+  
+ <tr>
+ {% for item in data %}
+ <td><textarea style="font-size: 20px" name="comments2" id="comments2" cols="135" rows="3" readonly=True>{{ item.name3 }}</textarea></td>
+ {% endfor %}
+ </tr>
+
+ <br>
+
+ <div>
+  <h2 class="h2">3. Who is the person in your life to whom you are the closest?</h2>
+ </div>
+  
+ <br><br>
+  
+ <tr>
+ {% for item in data %}
+ <td><textarea style="font-size: 20px" name="comments3" id="comments3" cols="135" rows="3" readonly=True>{{ item.name4 }}</textarea></td>
+ {% endfor %}
+ </tr>
+
+ <br>
+
+ <div>
+  <h2 class="h2">4. What motivates you in life?</h2>
+ </div>
+    
+ <br><br>
+    
+ <tr>
+ {% for item in data %}
+ <td><textarea style="font-size: 20px" name="comments4" id="comments4" cols="135" rows="3" readonly=True>{{ item.name5 }}</textarea></td>
+ {% endfor %}
+ </tr>
+
+ <div>
+  <h2 class="h2">5. What area of life would you like to improve with the help of mentor?</h2>
+ </div>
+    
+ <br><br>
+    
+ <tr>
+ {% for item in data %}
+ <td><textarea style="font-size: 20px" name="comments5" id="comments5" cols="135" rows="3" readonly=True>{{ item.name6 }}</textarea></td>
+ {% endfor %}
+ </tr>
+
+ <br>
+
+ <div>
+  <h2 class="h2">6. What do you like to do in your spare time?</h2>
+ </div>
+    
+ <br><br>
+    
+ <tr>
+ {% for item in data %}
+ <td><textarea style="font-size: 20px" name="comments6" id="comments6" cols="135" rows="3" readonly=True>{{ item.name7 }}</textarea></td>
+ {% endfor %}
+ </tr>
+
+ <br>
+
+ <div>
+  <h2 class="h2">7. Do you have any problems that might prevent you from meeting your mentor?</h2>
+ </div>
+    
+ <br><br>
+    
+ <tr>
+  {% for item in data %}
+ <td><textarea style="font-size: 20px" name="comments7" id="comments7" cols="135" rows="3" readonly=True>{{ item.name8 }}</textarea></td>
+ {% endfor %}
+ </tr>
+
+ <br>
+
+ <div>
+  <h2 class="h2">8. What are the extra curricular activities in which you participate?</h2>
+ </div>
+    
+ <br><br>
+    
+ <tr>
+ {% for item in data %}
+ <td><textarea style="font-size: 20px" name="comments8" id="comments8" cols="135" rows="3" readonly=True>{{ item.name9 }}</textarea></td>
+ {% endfor %}
+ </tr>
+
+ <br>
+
+ <div>
+  <h2 class="h2">9. Have you thought about beyond a degree in graduation?</h2>
+ </div>
+    
+ <br><br>
+    
+ <tr>
+ {% for item in data %}
+ <td><textarea style="font-size: 20px" name="comments9" id="comments9" cols="135" rows="3" readonly=True>{{ item.name10 }}</textarea></td>
+ {% endfor %}
+ </tr>
+
+ <br>
+
+ <div>
+  <h2 class="h2">10. What do you like most about yourself?</h2>
+ </div>
+      
+ <br><br>
+      
+ <tr>
+ {% for item in data %}
+ <td><textarea style="font-size: 20px" name="comments10" id="comments10" cols="135" rows="3" readonly=True>{{ item.name11 }}</textarea></td>
+ {% endfor %}
+ </tr>
+
+ <br>
+
+ <div>
+  <h2 class="h2">11. What do others like most about you?</h2>
+ </div>
+      
+ <br><br>
+      
+ <tr>
+ {% for item in data %} 
+ <td><textarea style="font-size: 20px" name="comments11" id="comments11" cols="135" rows="3" readonly=True>{{ item.name12 }}</textarea></td>
+ {% endfor %}
+ </tr>
+
+ <br>
+
+ <div>
+  <h2 class="h2">12. Whom do you admire or who is your idol / role model in life?</h2>
+ </div>
+      
+ <br><br>
+      
+ <tr>
+ {% for item in data %}
+ <td><textarea style="font-size: 20px" name="comments12" id="comments12" cols="135" rows="3" readonly=True>{{ item.name13 }}</textarea></td>
+ {% endfor %}
+ </tr>
+<br>
+<center><button class="button">EDIT</button></center><br>
+</form>
+</body>
+</html>

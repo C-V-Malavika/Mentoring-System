@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Meeting request </title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/newmeeting.css' %}"></link>
+</head>
+<body>
+
+  <p><h1 style="text-align: center; color: royalblue;">Meeting Request</h1></p>
+
+<div>
+  <form method="POST" action="{% url 'editablemeetingrequest' %}">
+    {% csrf_token %}
+
+    <p><label for="date" style="font-size: 20px">DATE</label><br></p>
+    <input  style="font-size: 20px" type="date" id="date" name="date" placeholder="On which day..?"><br>
+
+    <p><label for="time" style="font-size: 20px">TIME</label><br></p>
+    <input style="font-size: 20px" type="text" id="time" name="time" placeholder="At what time..?"><br>
+
+    <p><label for="description" style="font-size: 20px">DESCRIPTION</label><br></p>
+    <input style="font-size: 20px" type="text" id="description" name="description" placeholder="Description of Issue..?"><br>
+
+    <p><label for="choice" style="font-size: 20px">URGENCY TO MEET MENTOR</label></p>
+    <select style="font-size: 20px" id="choice" name="choice">
+        <option value="0"></option>
+        <option value="Urgent">URGENT</option>
+        <option value="Not Urgent">NOT URGENT</option>
+
+  <p><input style="font-size: 20px" type="submit" value="Submit"></p>
+</form>
+
+</div>
+</body>
+</html>
+
+

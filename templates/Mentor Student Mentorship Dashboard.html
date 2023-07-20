@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Details visible for Mentor</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/mentorstudentdetails.css' %}"></link>
+{% for item in data %}
+<h1 class="h1" style="text-align:center;">{{ item.name }}</h1>
+{% endfor %}
+</head>  
+<body>
+ <div class=".button">
+  <div class="center">
+   <form method="POST" action="{% url 'mentorstudentprofile' %}">
+    {% csrf_token %}
+   <button class="button">PROFILE</button>
+    </form>
+   <br><br>
+   <form method="POST" action="{% url 'mentorstudentselfassessment' %}">
+    {% csrf_token %}
+   <button class="button">SELF ASSESSMENT</button>
+    </form>
+   <br><br>
+   <form method="POST" action="{% url 'mentorstudentgoalsandchallenges' %}">
+    {% csrf_token %}
+   <button class="button">GOALS AND CHALLENGES</button>
+    </form>
+   <br><br>
+   <form method="POST" action="{% url 'mentorstudentachievements' %}">
+    {% csrf_token %}
+   <button class="button">STUDENT ACHIEVEMENTS</button>
+    </form>
+   <br><br>
+   <form method="POST" action="{% url 'newachievement' %}">
+    {% csrf_token %}
+   <button class="button">NEW ACHIEVEMENTS</button>
+    </form>
+   <br><br>
+   <form method="POST" action="{% url 'mentorstudentpreviousmeeting' %}">
+    {% csrf_token %}
+   <button class="button">PREVIOUS MEETING DETAILS</button>
+    </form>
+   <br><br>
+   <form method="POST" action="{% url 'newmeeting' %}">
+    {% csrf_token %}
+   <button class="button">NEW MEETING</button>
+    </form>
+  </div>
+ </div>
+
+</body>
+</html>

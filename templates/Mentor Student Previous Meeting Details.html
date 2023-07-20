@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Meeting</title>
+   {% load static %}
+   <link rel="stylesheet" href="{% static 'css/mentorstudentpreviousmeetingdetails.css' %}"></link>
+ <h1 class="h1">Previous meeting details</h1>
+</head>
+ 
+ <br><br>
+  
+ <font face="Times New Roman" size="5"><table style="width:50%" align="center">
+ <tr>
+ <th>Semster</th>
+ <th>Date and Time</th>
+ <th>Description</th>
+ <th>Remark</th> 
+ <th>Confidential Remark</th>
+ <th>Entered by</th>
+ <th>Action</th>
+ </tr>
+ {% for item in data %} 
+ <tr>
+    <td><textarea style="font-size: 20px" name="comments" id="comments" cols="5" rows="3" readonly=True>{{ item.semester }}</textarea></td>
+    <td><textarea style="font-size: 20px" name="comments" id="comments" cols="10" rows="3" readonly=True>{{ item.datetime }}</textarea></td>
+    <td><textarea style="font-size: 20px" name="comments" id="comments" cols="20" rows="3" readonly=True>{{ item.description }}</textarea></td>
+    <td><textarea style="font-size: 20px" name="comments" id="comments" cols="20" rows="3" readonly=True>{{ item.remark }}</textarea></td>
+    <td><textarea style="font-size: 20px" name="comments" id="comments" cols="20" rows="3" readonly=True>{{ item.confidentialremark }}</textarea></td>
+    <td><textarea style="font-size: 20px" name="comments" id="comments" cols="20" rows="3" readonly=True>{{ item.enteredby }}</textarea></td>
+    <td><textarea style="font-size: 20px" name="comments" id="comments" cols="20" rows="3" readonly=True>{{ item.action }}</textarea></td>
+ </tr>
+ {% endfor %}
+
+ </font> 
+ </table>   
+</body>
+</html>

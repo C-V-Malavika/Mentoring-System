@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mentor Profile</title>
+ {% load static %}
+ <link rel="stylesheet" href="{% static 'css/mentorprofile.css' %}"></link>
+</head>
+<body>
+{% for item in data %}  
+<h1 class="h1" style="text-align:center;">Welcome {{ item.name }}</h1>
+{% endfor %}
+<table style="width:100%">
+
+    <h2>PERSONAL DETAILS</h2>
+        <tr>
+            <td>Name</td>
+            {% for item in data %}
+            <td>{{ item.name }}</td> 
+            {% endfor %}   
+        </tr>
+        <tr>
+            <td>Department</td>
+            {% for item in data %}
+            <td>{{ item.department }}</td> 
+            {% endfor %} 
+        </tr>
+        <tr>
+            <td>Email</td>
+            {% for item in data %}
+            <td>{{ item.email }}</td> 
+            {% endfor %} 
+        </tr>
+        <tr>
+            <td>Mobile Number</td>
+            {% for item in data %}
+            <td>{{ item.mobilenumber }}</td> 
+            {% endfor %} 
+        </tr>
+        <tr>
+            <td>Landline Number</td>
+            {% for item in data %}
+            <td>{{ item.landline }}</td> 
+            {% endfor %} 
+        </tr>
+        <tr>
+            <td>Years of Experience</td>
+            {% for item in data %}
+            <td>{{ item.yearsofexperience }}</td> 
+            {% endfor %} 
+        </tr>
+       

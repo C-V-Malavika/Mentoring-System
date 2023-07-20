@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> One time Password </title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/newmeeting.css' %}"></link>
+</head>
+
+<body>
+ <h1 style="color: royalblue;">One time Password</h1>
+ <div class="center">
+  <form method="POST" action="{% url 'otppage' %}">
+    {% csrf_token %}
+     <label style="font-size: 25px" for="otp">Enter OTP:</label><br><br>
+     <input style="font-size: 20px" size="30" type="text" id="otp" name="otp"><br><br>
+    <p><input style="font-size: 20px" type="submit" value="Submit"></p>
+  </form>
+</div>
+</body>
+</html>

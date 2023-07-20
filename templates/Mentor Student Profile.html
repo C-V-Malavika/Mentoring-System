@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Profile</title>
+ {% load static %}
+ <link rel="stylesheet" href="{% static 'css/mentorstudentprofile.css' %}"></link>
+</head>
+<body>
+{% for item in data %}  
+<h1 class="h1" style="text-align:center;">Welcome {{ item.name }}</h1>
+{% endfor %}
+<table style="width:100%">
+
+    <h2>PERSONAL DETAILS</h2>
+        <tr>
+            <td>Name as in Aadhar</td>
+            {% for item in data %}
+            <td>{{ item.name }}</td> 
+            {% endfor %}   
+        </tr>
+        <tr>
+            <td>Aadhar/Passport Number</td>
+            {% for item in data %}
+            <td>{{ item.aadharnumber }}</td> 
+            {% endfor %} 
+        </tr>
+        <tr>
+            <td>First Name</td>
+            {% for item in data %}
+            <td>{{ item.firstname }}</td> 
+            {% endfor %} 
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            {% for item in data %}
+            <td>{{ item.lastname }}</td> 
+            {% endfor %} 
+        </tr>
+        <tr>
+            <td>E-Mail</td>
+            {% for item in data %}
+            <td>{{ item.email }}</td> 
+            {% endfor %} 
+        </tr>
+        <tr>
+            <td>Mobile Number</td>
+            {% for item in data %}
+            <td>{{ item.mobilenumber }}</td> 
+            {% endfor %} 
+        </tr>
+        <tr>
+            <td>Blood Group</td>
+            {% for item in data %}
+            <td>{{ item.bloodgroup }}</td> 
+            {% endfor %} 
+        </tr>
+        <tr>
+            <td>Date of Birth</td>
+            {% for item in data %}
+            <td>{{ item.dateofbirth }}</td> 
+            {% endfor %} 
+        </tr>
+        <tr>
+            <td>Gender</td>
+            {% for item in data %}
+            <td>{{ item.gender }}</td> 
+            {% endfor %} 
+        </tr>
+        <tr>
+            <td>Nationality</td>
+            {% for item in data %}
+            <td>{{ item.nationality }}</td> 
+            {% endfor %} 
+        </tr>
+        <tr>
+            <td>Religion</td>
+            {% for item in data %}
+            <td>{{ item.religion }}</td> 
+            {% endfor %} 
+        </tr>
+        <tr>
+            <td>Differently Abled</td>
+            {% for item in data %}
+            <td>{{ item.differentlyabled }}</td> 
+            {% endfor %} 
+        </tr>
+        <tr>
+            <td>Type of Disability</td>
+            {% for item in data %}
+            <td>{{ item.typeofdisability }}</td> 
+            {% endfor %} 
+        </tr>
+        <tr>
+            <td>Community Category</td>
+            {% for item in data %}
+            <td>{{ item.community }}</td> 
+            {% endfor %} 
+        </tr>
+        <tr>
+            <td>Mother Tongue</td>
+            {% for item in data %}
+            <td>{{ item.mothertongue }}</td> 
+            {% endfor %} 
+        </tr>
+    <br><br>
+</table>
+    
+<table style="width:100%">
+    <br><br>
+    <h2>ADMISSION DETAILS</h2>
+    <tr>
+        <td>Program Name</td>
+        {% for item in data %}
+        <td>{{ item.programname }}</td> 
+        {% endfor %}
+    </tr>
+    <tr>
+        <td>Associated Department</td>
+        {% for item in data %}
+        <td>{{ item.associateddepartment }}</td> 
+        {% endfor %}
+    </tr>
+    <tr>
+        <td>Mode of Admission</td>
+        {% for item in data %}
+        <td>{{ item.modeofadmission }}</td> 
+        {% endfor %}
+    </tr>
+    <tr>
+        <td>Admission Category</td>
+        {% for item in data %}
+        <td>{{ item.admissioncategory }}</td> 
+        {% endfor %}
+    </tr>     
+</table>
+
+<table style="width:100%">
+    <br><br>
+    <h2>SSLC DETAILS</h2>
+    <thead>
+    <tr>
+        <td>School Address</td>
+        {% for item in data %}
+        <td>{{ item.sslcschooladdress }}</td> 
+        {% endfor %}
+    </tr>
+    <tr>
+        <td>Year of passing</td>
+        {% for item in data %}
+        <td>{{ item.sslcyearofpassing }}</td> 
+        {% endfor %}
+    </tr>
+    <tr>
+        <td>Board/University</td>
+        {% for item in data %}
+        <td>{{ item.sslcboardoruniversity }}</td> 
+        {% endfor %}
+    </tr>
+    <tr>
+        <td>Group</td>
+        {% for item in data %}
+        <td>{{ item.sslcgroup }}</td> 
+        {% endfor %}
+    </tr>
+    <tr>
+        <td>Percentage</td>
+        {% for item in data %}
+        <td>{{ item.sslcpercentage }}</td> 
+        {% endfor %}
+    </tr>
+</table>
+
+<table style="width:100%">
+    <br><br>
+    <h2>HSC DETAILS</h2>
+    <thead>
+    <tr>
+        <td>School Address</td>
+        {% for item in data %}
+        <td>{{ item.hscschooladdress }}</td> 
+        {% endfor %}
+    </tr>
+    <tr>
+        <td>Year of passing</td>
+        {% for item in data %}
+        <td>{{ item.hscyearofpassing }}</td> 
+        {% endfor %}
+    </tr>
+    <tr>
+        <td>Board/University</td>
+        {% for item in data %}
+        <td>{{ item.hscboardofstudy }}</td> 
+        {% endfor %}
+    </tr>
+    <tr>
+        <td>Group</td>
+        {% for item in data %}
+        <td>{{ item.hscgroup }}</td> 
+        {% endfor %}
+    </tr>
+    <tr>
+        <td>Percentage</td>
+        {% for item in data %}
+        <td>{{ item.hscpercentage }}</td> 
+        {% endfor %}
+    </tr>
+    <tr>
+        <td>Maths/Physics/Chemistry</td>
+        {% for item in data %}
+        <td>{{ item.hscmaths }}/{{ item.hscphysics }}/{{ item.hscchemistry }}</td> 
+        {% endfor %}
+    </tr>
+</table>
+
+<table style="width:100%">
+    <br><br>
+    <h2>ADDRESS</h2>
+    <thead>
+    <tr>
+        <td>Current Address</td>
+        {% for item in data %}
+        <td>{{ item.currentaddress }}</td> 
+        {% endfor %}
+    </tr>
+    <tr>
+        <td>Permanent Address</td>
+        {% for item in data %}
+        <td>{{ item.permanentaddress }}</td> 
+        {% endfor %}
+    </tr>
+</table>
+
+<table style="width:100%">
+    <br><br>
+    <h2>FATHER DETAILS</h2>
+    <thead>
+    <tr>
+        <td>Name</td>
+        {% for item in data %}
+        <td>{{ item.fathername }}</td> 
+        {% endfor %}
+    </tr>
+    <tr>
+        <td>E-Mail</td>
+        {% for item in data %}
+        <td>{{ item.fatheremail }}</td> 
+        {% endfor %}
+    </tr>
+    <tr>
+        <td>Mobile</td>
+        {% for item in data %}
+        <td>{{ item.fathermobilenumber }}</td> 
+        {% endfor %}
+    </tr>
+    <tr>
+        <td>Date of Birth</td>
+        {% for item in data %}
+        <td>{{ item.fatherdateofbirth }}</td> 
+        {% endfor %}
+    </tr>
+    <tr>
+        <td>Qualification</td>
+        {% for item in data %}
+        <td>{{ item.fatherqualification }}</td> 
+        {% endfor %}
+    </tr>
+    <tr>
+        <td>Occupation</td>
+        {% for item in data %}
+        <td>{{ item.fatheroccupation }}</td> 
+        {% endfor %}
+    </tr>
+    <tr>
+        <td>Designation</td>
+        {% for item in data %}
+        <td>{{ item.fatherdesignation }}</td> 
+        {% endfor %}
+    </tr>
+    <tr>
+        <td>Annual Income</td>
+        {% for item in data %}
+        <td>{{ item.fatherannualincome }}</td> 
+        {% endfor %}
+    </tr>
+</table>
+
+<table style="width:100%">
+    <br><br>
+    <h2>MOTHER DETAILS</h2>
+    <thead>
+    <tr>
+        <td>Name</td>
+        {% for item in data %}
+        <td>{{ item.mothername }}</td> 
+        {% endfor %}
+    </tr>
+    <tr>
+        <td>E-Mail</td>
+        {% for item in data %}
+        <td>{{ item.motheremail }}</td> 
+        {% endfor %}
+    </tr>
+    <tr>
+        <td>Mobile</td>
+        {% for item in data %}
+        <td>{{ item.mothermobilenumber }}</td> 
+        {% endfor %}
+    </tr>
+    <tr>
+        <td>Date of Birth</td>
+        {% for item in data %}
+        <td>{{ item.motherdateofbirth }}</td> 
+        {% endfor %}
+    </tr>
+    <tr>
+        <td>Qualification</td>
+        {% for item in data %}
+        <td>{{ item.motherqualification }}</td> 
+        {% endfor %}
+    </tr>
+    <tr>
+        <td>Occupation</td>
+        {% for item in data %}
+        <td>{{ item.motheroccupation }}</td> 
+        {% endfor %}
+    </tr>
+    <tr>
+        <td>Designation</td>
+        {% for item in data %}
+        <td>{{ item.motherdesignation }}</td> 
+         {% endfor %}
+    </tr>
+    <tr>
+        <td>Annual Income</td>
+        {% for item in data %}
+        <td>{{ item.motherannualincome }}</td> 
+        {% endfor %}
+    </tr>
+</table>
+</body>
+</html>
