@@ -55,7 +55,7 @@ def editableforgotpassword(request):
  
                     message="You requested to change password"+"\n"+"Here is the otp"+"\n"+f"{otp_generated}"
 
-                    Sending_Mail("malavika2210770@ssn.edu.in",message)
+                    Sending_Mail(request.POST["email"],message)
 
                     return render(request,"OTP.html")
                 
@@ -821,7 +821,7 @@ def editablemeetingrequest(request):
             for row in reader:
                 if row[1]==request.session.get("USER"):
                     name=row[3]
-                    email="malavika2210770@ssn.edu.in"
+                    email=row[1]
 
         with open("SDPMS_App/csv/Login.csv") as f:
             reader=csv.reader(f)
@@ -961,7 +961,7 @@ def newmeetingdetails(request):
 
                     message=f"{name}"+" "+"has met the mentor today"+"\n"+f"({date})"+" "+"at"+f"{time}"+"\n"+"Here is the report of the meeting"+"\n"+"Semester : "+f"{semester}"+"\n"+"Description : "+f"{description}"+"\n"+"Remark : "+f"{remark}"+"\n"+"Mentor Name : "+f"{enteredby}"
                     
-                    Sending_Mail("malavika2210770@ssn.edu.in",message)
+                    Sending_Mail(father_email,message)
 
                     list_data=prev_Meeting_details(filename)
                     list_data.append(new_list_details)
