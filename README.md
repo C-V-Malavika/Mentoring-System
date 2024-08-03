@@ -43,9 +43,11 @@ It has two main parts:
 ## Mentor
 
 **1. Profile**
+
 This page shows the profile of the mentor. 
 
 **2. Mentorship**
+
 This section deals with mentorship activities. A list of 10 mentees is assigned to every mentor. When the mentor clicks any of the 10 mentees, the mentee's details are shown.
 
 - The mentee's profile is shown when 'Profile' is clicked.
@@ -58,9 +60,11 @@ This section deals with mentorship activities. A list of 10 mentees is assigned 
 ## Mentee
 
 **1. Profile**
+
 This page shows the entire bio data of the mentee.
 
 **2. Mentorship**
+
 This section deals with mentorship activities.
 
 - The self assessment page has a set of questions to be answered by the mentee. This can be done from mentee's login by clicking the 'Self assessment' button.
