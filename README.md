@@ -1,10 +1,10 @@
 # MENTORING SYSTEM
 
-## About
+## ABOUT
 
 This system will serve as a centralized platform for mentors, mentees to effectively communicate, track progress, and generate insightful reports. This is mainly developed for educational institutions.
 
-## Tech Stack
+## TECH STACK
 
 - Python
 - Django
@@ -12,7 +12,7 @@ This system will serve as a centralized platform for mentors, mentees to effecti
 - CSS
 - Files: Json, csv
 
-## Design and Development
+## DESIGN AND DEVELOPMENT
 
 The Mentoring System is designed using Python programming language based on the OOPS concept along with using Data Structures like Linked lists, Linked stacks, Dynamic stacks, Lists and Dictionaries. 
 
@@ -40,7 +40,7 @@ It has two main parts:
      - Meeting
      - Mentor Timetable 
 
-## Mentor
+## MENTOR
 
 **1. Profile**
 
@@ -57,7 +57,7 @@ This section deals with mentorship activities. A list of 10 mentees is assigned 
 - The new achievements of the mentee can be added by the Mentor by clicking the 'New Achievements' button.
 - Under 'New Meeting', the mentor can arrange a meeting with individual mentee or with all mentees which is mailed to the parent's mail directly and the mentees will see the same in this application from their login.
 
-## Mentee
+## MENTEE
 
 **1. Profile**
 
@@ -78,3 +78,12 @@ This section deals with mentorship activities.
 
 1. Emails are sent when meetings are arranged.
 2. Change Password functionality including OTP generation.
+
+## TECH TEAM:
+
+1. LOKESH S
+2. MADHUKRISHAA N K
+3. MADHUSUDHANAN
+4. MALAVIKA C V
+5. MANISH KUMAR N K
+6. MANJU SRI S
