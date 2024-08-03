@@ -87,3 +87,5 @@ This section deals with mentorship activities.
 4. MALAVIKA C V
 5. MANISH KUMAR N K
 6. MANJU SRI S
+            
+Sophomores at Sri Sivasubramaniya Nadar College of Engineering
