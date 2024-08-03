@@ -74,7 +74,7 @@ This section deals with mentorship activities.
 - Under 'Meeting', the mentee can request a personal meeting with the mentor upon which it will be mailed to the mentor automatically.
 - Under 'Mentor Timetable', the mentor's timetable is displayed for mentee's reference.
 
-## Additional Functionalities:
+## ADDITIONAL FUNCTIONALITIES:
 
 1. Emails are sent when meetings are arranged.
 2. Change Password functionality including OTP generation.
